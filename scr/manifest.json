@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Moyenne Pronote",
+  "version": "1.6",
+  "description": "Ceci est une extension pour navigateur qui ajoute les moyennes générales dans Pronote. Développer par Loïc, version 1.6 sous la licence GNU GPL v3.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "author": "m-loïc",
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.index-education.net/*"],
+      "js": ["content.js"],
+	  "run_at": "document_end"
+    }
+  ]
+}
